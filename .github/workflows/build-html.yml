@@ -34,4 +34,4 @@ jobs:
         run: |
           git add public/static/html/result.html
           git commit -m "자동 생성된 HTML 업데이트" || echo "Nothing to commit"
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:master
