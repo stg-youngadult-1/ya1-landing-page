@@ -6,7 +6,10 @@ const imageNames = [
     'channels4_profile.jpg',
 ];
 
-export default function ImageList({ prefix = '' }) {
+export default function ImageList({ prefix = 'abc' }) {
+
+    prefix = process.env.STATIC_IMG_ROOT || '';
+
     return (
         <div style={{ padding: '2rem' }}>
             <h1>📷 이미지 갤러리</h1>

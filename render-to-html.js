@@ -10,9 +10,9 @@ const fs = require('fs');
 const path = require('path');
 const React = require('react');
 const ReactDOMServer = require('react-dom/server');
-const ImageList = require('./src/ImageList.jsx').default;
+const App = require("./src/App").default;
 
-const html = ReactDOMServer.renderToStaticMarkup(React.createElement(ImageList, {prefix: process.env.STATIC_IMG_ROOT}));
+const html = ReactDOMServer.renderToStaticMarkup(React.createElement(App));
 
 const fullHtml = `
 <!DOCTYPE html>
