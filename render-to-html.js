@@ -18,6 +18,7 @@ const fullHtml = `
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <meta charset="UTF-8" />
   <title>Image Gallery</title>
 </head>

@@ -17,7 +17,7 @@ export default function ImageList({ prefix = 'abc' }) {
                 {imageNames.map((name, i) => (
                     <div key={i}>
                         <img
-                            src={`${prefix}/static/img/${name}`}
+                            src={`${prefix}/img/${name}`}
                             alt={name}
                             style={{ width: '200px', objectFit: 'contain' }}
                         />
