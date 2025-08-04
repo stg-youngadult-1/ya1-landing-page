@@ -1,6 +1,9 @@
+const dotenv = require('dotenv');
+dotenv.config({path: '.env.script'});
+
 require('@babel/register')({
-  extensions: ['.js', '.jsx'],
-  ignore: [/node_modules/]
+    extensions: ['.js', '.jsx'],
+    ignore: [/node_modules/]
 });
 
 const fs = require('fs');
@@ -9,7 +12,7 @@ const React = require('react');
 const ReactDOMServer = require('react-dom/server');
 const ImageList = require('./src/ImageList.jsx').default;
 
-const html = ReactDOMServer.renderToStaticMarkup(React.createElement(ImageList, {prefix: '/ya1-landing-page/public'}));
+const html = ReactDOMServer.renderToStaticMarkup(React.createElement(ImageList, {prefix: process.env.STATIC_IMG_ROOT}));
 
 const fullHtml = `
 <!DOCTYPE html>
@@ -25,7 +28,7 @@ const fullHtml = `
 `;
 
 const outputPath = path.join(__dirname, 'public/static/html');
-fs.mkdirSync(outputPath, { recursive: true });
+fs.mkdirSync(outputPath, {recursive: true});
 fs.writeFileSync(path.join(outputPath, 'result.html'), fullHtml);
 
 console.log('✅ HTML 생성 완료: static/html/result.html');
