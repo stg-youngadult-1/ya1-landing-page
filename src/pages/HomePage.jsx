@@ -1,15 +1,18 @@
 import React from 'react';
+import * as path from "node:path";
 
 // import ImageList from "./ImageList";
 
 export default function HomePage() {
+    const prefix = process.env.STATIC_IMG_ROOT || '';
+    console.log(prefix)
 
     const menuItems = [
-        {title: "환영합니다!!", img: "/img/img_2.jpeg"},
-        {title: "부서", img: "/img/channels4_profile.jpg"},
-        {title: "소그룹", img: "/img/img_6.jpeg"},
-        {title: "타임라인", img: "/img/img_3.jpeg"},
-        {title: "새가족 단톡", img: "/img/img_4.jpeg"},
+        {title: "환영합니다!!", img: path.join(prefix, "/img/img_2.jpeg")},
+        {title: "부서", img: path.join(prefix,"/img/channels4_profile.jpg")},
+        {title: "소그룹", img: path.join(prefix,"/img/img_6.jpeg")},
+        {title: "타임라인", img: path.join(prefix,"/img/img_3.jpeg")},
+        {title: "새가족 단톡", img: path.join(prefix,"/img/img_4.jpeg")},
         {title: "행사"},
     ];
 
@@ -33,7 +36,7 @@ export default function HomePage() {
                 {/* 메인 이미지 */}
                 <div className="mt-4 relative rounded-3xl overflow-hidden shadow-md/20">
                     <img
-                        src="/img/img_1.jpeg"
+                        src= {path.join(prefix, "/img/img_1.jpeg")}
                         alt="Main"
                         className="w-full h-full object-cover"
                     />
