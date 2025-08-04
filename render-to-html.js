@@ -9,7 +9,7 @@ const React = require('react');
 const ReactDOMServer = require('react-dom/server');
 const ImageList = require('./src/ImageList.jsx').default;
 
-const html = ReactDOMServer.renderToStaticMarkup(React.createElement(ImageList));
+const html = ReactDOMServer.renderToStaticMarkup(React.createElement(ImageList, {prefix: '/ya1-landing-page/public'}));
 
 const fullHtml = `
 <!DOCTYPE html>

@@ -6,7 +6,7 @@ const imageNames = [
     'channels4_profile.jpg',
 ];
 
-export default function ImageList() {
+export default function ImageList({ prefix = '' }) {
     return (
         <div style={{ padding: '2rem' }}>
             <h1>📷 이미지 갤러리</h1>
@@ -14,7 +14,7 @@ export default function ImageList() {
                 {imageNames.map((name, i) => (
                     <div key={i}>
                         <img
-                            src={`/public/static/img/${name}`}
+                            src={`${prefix}/static/img/${name}`}
                             alt={name}
                             style={{ width: '200px', objectFit: 'contain' }}
                         />
