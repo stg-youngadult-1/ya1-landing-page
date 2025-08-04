@@ -1,8 +1,8 @@
-name: Build static HTML
+name: Build and commit static HTML
 
 on:
   push:
-    branches: [main]
+    branches: [master]
 
 jobs:
   build:
@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          persist-credentials: false # 아래 step에서 토큰 수동 사용 예정
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -20,11 +22,16 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Generate HTML
+      - name: Generate static HTML
         run: npm run generate-html
 
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: result-html
-          path: public/static/html/result.html
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Commit and push result.html
+        run: |
+          git add public/static/html/result.html
+          git commit -m "자동 생성된 HTML 업데이트" || echo "Nothing to commit"
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main
