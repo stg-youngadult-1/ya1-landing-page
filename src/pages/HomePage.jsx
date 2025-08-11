@@ -40,7 +40,7 @@ export default function HomePage() {
 
                 <div className="flex flex-col items-center -mt-2">
                     <img src="/img/channels4_profile.jpg" alt="Logo" className="w-24 h-24 rounded-full"/>
-                    <h2 className="mt-2 text-lg text-white font-bold">시광교회 청년1부</h2>
+                    <h2 className="mt-2 text-lg text-white font-bold ">시광교회 청년1부</h2>
                     {/*<p className="text-sm text-gray-200">새가족 소개</p>*/}
                 </div>
 
@@ -82,6 +82,10 @@ export default function HomePage() {
                     {/*    <img src="/img/fav.png" alt="즐겨찾기" className="w-10 h-10 rounded-full object-cover mr-3"/>*/}
                     {/*    <span className="flex-1 text-left">청1 즐겨찾기 모음</span>*/}
                 </div>
+
+
+                <SubtitleComponent subtitle={"링크"}/>
+            {/*    여기에 추가 */}
             </div>
         </div>
     );
