@@ -1,7 +1,6 @@
 import React from 'react';
 import ButtonComponent from "../components/ButtonComponent";
-
-// import ImageList from "./ImageList";
+import SubtitleComponent from "../components/SubtitleComponent";
 
 export default function HomePage() {
     const prefix = process.env.STATIC_IMG_ROOT || '';
@@ -46,9 +45,7 @@ export default function HomePage() {
                 </div>
 
 
-                <div className="flex flex-col items-center mt-5">
-                    <h2 className="mt-2 text-md text-white font-bold">새가족 소개</h2>
-                </div>
+                <SubtitleComponent subtitle={"새가족 소개"}/>
 
                 {/* 메인 이미지 */}
                 <div className="mt-4 relative rounded-3xl overflow-hidden shadow-md/20">
@@ -70,10 +67,7 @@ export default function HomePage() {
                     ))}
                 </div>
 
-
-                <div className="flex flex-col items-center mt-5">
-                    <h2 className="mt-2 text-md text-white font-bold">청년1부 즐겨찾기</h2>
-                </div>
+                <SubtitleComponent subtitle={"청년1부 즐겨찾기"}/>
 
                 {/* 즐겨찾기 */}
                 <div className="mt-6 text-center text-sm text-blue-800 font-semibold">
