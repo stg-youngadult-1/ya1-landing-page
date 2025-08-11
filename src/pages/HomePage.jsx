@@ -1,6 +1,8 @@
 import React from 'react';
 import ButtonComponent from "../components/ButtonComponent";
 import SubtitleComponent from "../components/SubtitleComponent";
+import ColumnIconList from "../components/ColumnIconList";
+
 
 export default function HomePage() {
     const prefix = process.env.STATIC_IMG_ROOT || '';
@@ -26,6 +28,16 @@ export default function HomePage() {
         {title: "청1 구글포토", img: joinUrl(prefix, "/img/sm_photo.png")},
         // {title: "", img: joinUrl(prefix, "/img/")},
     ]
+
+    const starLinks = [
+        {title: "YouTube", href: "https://youtube.com", img: joinUrl(prefix, "/img/sm_star.png")},
+        {title: "Instagram", href: "https://instagram.com", img: joinUrl(prefix, "/img/sm_star.png")},
+        {title: "Notion", href: "https://www.notion.so", img: joinUrl(prefix, "/img/sm_star.png")},
+        {title: "Google Docs", href: "https://docs.google.com", img: joinUrl(prefix, "/img/sm_star.png")},
+        {title: "Drive", href: "https://drive.google.com", img: joinUrl(prefix, "/img/sm_star.png")},
+        {title: "Drive", href: "https://drive.google.com", img: joinUrl(prefix, "/img/sm_star.png")},
+        // 필요에 따라 더 추가
+    ];
 
     return (
         <div className="flex justify-center items-center min-h-screen bg-sky-600/90 md:px-4 md:py-10">
@@ -85,7 +97,8 @@ export default function HomePage() {
 
 
                 <SubtitleComponent subtitle={"링크"}/>
-            {/*    여기에 추가 */}
+                <ColumnIconList links={starLinks}/>
+
             </div>
         </div>
     );
