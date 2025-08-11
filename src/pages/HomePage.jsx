@@ -2,6 +2,7 @@ import React from 'react';
 import ButtonComponent from "../components/ButtonComponent";
 import SubtitleComponent from "../components/SubtitleComponent";
 import ColumnIconList from "../components/ColumnIconList";
+import CardNewsCarousel from "../components/CardNewsCarousel";
 
 
 export default function HomePage() {
@@ -20,6 +21,51 @@ export default function HomePage() {
         {title: "타임라인", img: joinUrl(prefix, "/img/img_3.jpeg")},
         {title: "새가족 단톡", img: joinUrl(prefix, "/img/img_4.jpeg")},
         {title: "행사"},
+    ];
+
+    const cardNews = [
+        {
+            tag: "DIGITAL DESIGN",
+            title: "Creating Usability with Motion: The UX in Motion Manifesto",
+            author: "Issara Willenskomer",
+            href: "#",
+            gradient: "from-rose-500 via-orange-400 to-amber-300",
+        },
+        {
+            tag: "DIGITAL DESIGN",
+            title: "Product Vision for Product Managers",
+            author: "Eugen Eşanu",
+            href: "#",
+            gradient: "from-indigo-500 via-fuchsia-500 to-pink-500",
+        },
+        {
+            tag: "EDITOR'S PICK",
+            title: "When Companies Question the Value of Design",
+            author: "Alan Cooper",
+            href: "#",
+            gradient: "from-pink-500 via-rose-500 to-orange-400",
+        },
+        {
+            tag: "SELF HELP",
+            title: "The Most Important Skill Nobody Taught You",
+            author: "Zat Rana",
+            href: "#",
+            gradient: "from-sky-500 via-cyan-500 to-blue-500",
+        },
+        {
+            tag: "DIGITAL DESIGN",
+            title: "5 Things To Do Differently About Your Product’s UX",
+            author: "Eugen Eşanu",
+            href: "#",
+            gradient: "from-emerald-500 via-teal-500 to-lime-500",
+        },
+        {
+            tag: "ART",
+            title: "Leonardo Da Vinci was the best UX Designer in history",
+            author: "Flavio Lamenza",
+            href: "#",
+            gradient: "from-blue-500 via-cyan-500 to-emerald-500",
+        },
     ];
 
     const starItems = [
@@ -57,6 +103,9 @@ export default function HomePage() {
                     <h2 className="mt-2 text-lg text-white font-bold ">시광교회 청년1부</h2>
                     {/*<p className="text-sm text-gray-200">새가족 소개</p>*/}
                 </div>
+
+                <SubtitleComponent subtitle={"카드뉴스"}/>
+                <CardNewsCarousel items={cardNews} />
 
                 <SubtitleComponent subtitle={"새가족 소개"}/>
 
