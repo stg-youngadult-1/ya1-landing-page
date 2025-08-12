@@ -99,7 +99,7 @@ export default function HomePage() {
                 </div>
 
                 <div className="flex flex-col items-center -mt-2">
-                    <img src="/img/channels4_profile.jpg" alt="Logo" className="w-24 h-24 rounded-full"/>
+                    <img src={joinUrl(prefix, "/img/channels4_profile.jpg")} alt="Logo" className="w-24 h-24 rounded-full"/>
                     <h2 className="mt-2 text-lg text-white font-bold ">시광교회 청년1부</h2>
                     {/*<p className="text-sm text-gray-200">새가족 소개</p>*/}
                 </div>

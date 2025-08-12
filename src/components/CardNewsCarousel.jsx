@@ -8,6 +8,12 @@ import React, {useRef, useMemo} from "react";
  */
 export default function CardNewsCarousel({items = []}) {
     const trackRef = useRef(null);
+    const prefix = process.env.STATIC_IMG_ROOT || '';
+
+    const joinUrl = (prefix, p) => {
+        if (!prefix) return p;
+        return `${String(prefix).replace(/\/+$/, '')}/${String(p).replace(/^\/+/, '')}`;
+    };
 
     const scrollByCard = (dir = 1) => {
         const el = trackRef.current;
@@ -43,16 +49,62 @@ export default function CardNewsCarousel({items = []}) {
                 className="flex gap-2 overflow-x-auto scroll-smooth snap-x snap-mandatory -mx-4 px-4"
                 style={{scrollbarWidth: "none"}}
             >
-                {items.map((it, idx) => (<a
+
+
+                <div
+                    data-card
+                    className="snap-start shrink-0 rounded-2xl p-3 text-white  transition hover:translate-y-[-2px]
+             w-[100%] sm:w-[100%] md:w-[100%] overflow-hidden aspect-[5/6]"
+                >
+                    <div
+                        className={`rounded-2xl p-5 h-full min-w-0  flex flex-col justify-end shadow-md hover:shadow-lg`}
+                        style={{
+                            backgroundImage: `url('${joinUrl(prefix, "/img/img_1.jpeg")}')`,
+                            backgroundSize: "auto 120%",
+                            backgroundPosition: "center"
+                        }}
+                    >
+
+                        {/*<div*/}
+                        {/*    className={`absolute inset-0 bg-gradient-to-br ${*/}
+                        {/*        "from-black/70 to-black/0 "*/}
+                        {/*    } mix-blend-multiply`}*/}
+                        {/*/>*/}
+
+                        {/*<div className="absolute bottom-0 left-0 right-0 top-0 bg-black/40"></div>*/}
+                        {/* 반투명 오버레이 */}
+
+                        <p className="uppercase tracking-wide text-xs/5 opacity-90">hello</p>
+
+                        <h3
+                            className="mt-2 text-xl font-bold leading-snug whitespace-normal break-words hyphens-auto overflow-hidden"
+                            style={{
+                                display: "-webkit-box",
+                                WebkitLineClamp: 3,
+                                WebkitBoxOrient: "vertical",
+                            }}
+                        >
+                            hello
+                        </h3>
+
+                        <p className="mt-3 text-sm/5 opacity-90">hello</p>
+                        <div className="mt-6 flex justify-end">
+                            <span className="text-2xl opacity-90">→</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                {items.map((it, idx) => (
+                    <div
                         key={idx}
                         data-card
-                        href={it.href || "#"}
                         className="snap-start shrink-0 rounded-2xl p-3 text-white  transition hover:translate-y-[-2px]
-             w-[100%] sm:w-[100%] md:w-[100%] overflow-hidden"
+             w-[100%] sm:w-[100%] md:w-[100%] overflow-hidden aspect-[5/6]"
                         style={{backgroundImage: "linear-gradient(135deg,var(--tw-gradient-stops))"}}
                     >
                         <div
-                            className={`bg-gradient-to-br ${it.gradient || "from-fuchsia-500 via-purple-500 to-sky-500"} rounded-2xl p-5 h-full min-w-0 shadow-md hover:shadow-lg`}>
+                            className={`bg-gradient-to-br ${it.gradient || "from-fuchsia-500 via-purple-500 to-sky-500"} rounded-2xl p-5 h-full min-w-0  flex flex-col justify-end shadow-md hover:shadow-lg`}>
                             <p className="uppercase tracking-wide text-xs/5 opacity-90">{it.tag}</p>
 
                             <h3
@@ -70,20 +122,8 @@ export default function CardNewsCarousel({items = []}) {
                             <div className="mt-6 flex justify-end">
                                 <span className="text-2xl opacity-90">→</span>
                             </div>
-                            <div className="mt-6 flex justify-end">
-                                <span className="text-2xl opacity-90">→</span>
-                            </div>
-                            <div className="mt-6 flex justify-end">
-                                <span className="text-2xl opacity-90">→</span>
-                            </div>
-                            <div className="mt-6 flex justify-end">
-                                <span className="text-2xl opacity-90">→</span>
-                            </div>
-                            <div className="mt-6 flex justify-end">
-                                <span className="text-2xl opacity-90">→</span>
-                            </div>
                         </div>
-                    </a>
+                    </div>
                 ))}
             </div>
 
