@@ -21,38 +21,38 @@ export default function CardNewsCarousel({items = []}) {
 
     return (
         <div className="relative">
-            {/* 좌우 버튼 */}
-            <button
-                onClick={() => scrollByCard(-1)}
-                className="hidden md:flex absolute -left-2 top-1/2 -translate-y-1/2 z-10 h-9 w-9 items-center justify-center rounded-full bg-white/90 shadow hover:bg-white"
-                aria-label="이전"
-            >
-                ‹
-            </button>
-            <button
-                onClick={() => scrollByCard(1)}
-                className="hidden md:flex absolute -right-2 top-1/2 -translate-y-1/2 z-10 h-9 w-9 items-center justify-center rounded-full bg-white/90 shadow hover:bg-white"
-                aria-label="다음"
-            >
-                ›
-            </button>
+            {/*/!* 좌우 버튼 *!/*/}
+            {/*<button*/}
+            {/*    onClick={() => scrollByCard(-1)}*/}
+            {/*    className="hidden md:flex absolute -left-2 top-1/2 -translate-y-1/2 z-10 h-9 w-9 items-center justify-center rounded-full bg-white/90 shadow hover:bg-white"*/}
+            {/*    aria-label="이전"*/}
+            {/*>*/}
+            {/*    ‹*/}
+            {/*</button>*/}
+            {/*<button*/}
+            {/*    onClick={() => scrollByCard(1)}*/}
+            {/*    className="hidden md:flex absolute -right-2 top-1/2 -translate-y-1/2 z-10 h-9 w-9 items-center justify-center rounded-full bg-white/90 shadow hover:bg-white"*/}
+            {/*    aria-label="다음"*/}
+            {/*>*/}
+            {/*    ›*/}
+            {/*</button>*/}
 
             {/* 트랙 */}
             <div
                 ref={trackRef}
-                className="flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-2 -mx-4 px-4"
+                className="flex gap-2 overflow-x-auto scroll-smooth snap-x snap-mandatory -mx-4 px-4"
                 style={{scrollbarWidth: "none"}}
             >
                 {items.map((it, idx) => (<a
                         key={idx}
                         data-card
                         href={it.href || "#"}
-                        className="snap-start shrink-0 rounded-2xl p-5 text-white shadow-lg transition hover:translate-y-[-2px] hover:shadow-xl
-             w-[95%] sm:w-[95%] md:w-[95%] overflow-hidden"   // ← 여기
+                        className="snap-start shrink-0 rounded-2xl p-3 text-white  transition hover:translate-y-[-2px]
+             w-[100%] sm:w-[100%] md:w-[100%] overflow-hidden"
                         style={{backgroundImage: "linear-gradient(135deg,var(--tw-gradient-stops))"}}
                     >
                         <div
-                            className={`bg-gradient-to-br ${it.gradient || "from-fuchsia-500 via-purple-500 to-sky-500"} rounded-2xl p-5 h-full min-w-0`}>
+                            className={`bg-gradient-to-br ${it.gradient || "from-fuchsia-500 via-purple-500 to-sky-500"} rounded-2xl p-5 h-full min-w-0 shadow-md hover:shadow-lg`}>
                             <p className="uppercase tracking-wide text-xs/5 opacity-90">{it.tag}</p>
 
                             <h3
@@ -70,17 +70,29 @@ export default function CardNewsCarousel({items = []}) {
                             <div className="mt-6 flex justify-end">
                                 <span className="text-2xl opacity-90">→</span>
                             </div>
+                            <div className="mt-6 flex justify-end">
+                                <span className="text-2xl opacity-90">→</span>
+                            </div>
+                            <div className="mt-6 flex justify-end">
+                                <span className="text-2xl opacity-90">→</span>
+                            </div>
+                            <div className="mt-6 flex justify-end">
+                                <span className="text-2xl opacity-90">→</span>
+                            </div>
+                            <div className="mt-6 flex justify-end">
+                                <span className="text-2xl opacity-90">→</span>
+                            </div>
                         </div>
                     </a>
                 ))}
             </div>
 
             {/* 인디케이터 (간단 점) */}
-            <div className="mt-2 flex justify-center gap-1.5">
-                {dots.map((d) => (
-                    <span key={d} className="h-1.5 w-1.5 rounded-full bg-white/70"></span>
-                ))}
-            </div>
+            {/*<div className="mt-2 flex justify-center gap-1.5">*/}
+            {/*    {dots.map((d) => (*/}
+            {/*        <span key={d} className="h-1.5 w-1.5 rounded-full bg-white/70"></span>*/}
+            {/*    ))}*/}
+            {/*</div>*/}
         </div>
     );
 }
