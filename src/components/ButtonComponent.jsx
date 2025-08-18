@@ -1,9 +1,11 @@
 import React from "react";
 
 export default function ButtonComponent({item}) {
-    return <button
+    return <a
         className="h-17 w-full flex items-center bg-[#3e9ce6] text-white rounded-full p-3 shadow-md/20 hover:bg-blue-500 transition"
-        onClick={() => window.open(item.href, "_blank")}
+        href={item.href}
+        target="_blank"
+        rel="noopener noreferrer"
     >
         {
             item.img &&
@@ -15,5 +17,5 @@ export default function ButtonComponent({item}) {
         }
         <span className="flex-1 text-left">{item.title}</span>
         <span className="text-lg">⋮</span>
-    </button>;
+    </a>;
 }
