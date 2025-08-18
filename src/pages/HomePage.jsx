@@ -136,7 +136,7 @@ export default function HomePage() {
 
                 <Subdivision>
                     {/* 즐겨찾기 */}
-                    <div className="mt-4 space-y-3">
+                    <div className="mt-2 space-y-3">
                         {starItems.map((item, idx) => (
                             <ButtonComponent key={idx} item={item}/>
                         ))}

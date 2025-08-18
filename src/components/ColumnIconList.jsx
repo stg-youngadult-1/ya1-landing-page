@@ -28,7 +28,7 @@ export default function ColumnIconList({links}) {
     const icon_scroll_number = 4;
 
     return <div
-        className="mt-3 overflow-x-auto [&::-webkit-scrollbar]:hidden"
+        className="mt-2 overflow-x-auto [&::-webkit-scrollbar]:hidden"
         style={{scrollbarWidth: "none"}} // Firefox
     >
         <ul

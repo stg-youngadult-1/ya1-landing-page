@@ -27,22 +27,6 @@ export default function CardNewsCarousel({items = []}) {
 
     return (
         <div className="relative">
-            {/*/!* 좌우 버튼 *!/*/}
-            {/*<button*/}
-            {/*    onClick={() => scrollByCard(-1)}*/}
-            {/*    className="hidden md:flex absolute -left-2 top-1/2 -translate-y-1/2 z-10 h-9 w-9 items-center justify-center rounded-full bg-white/90 shadow hover:bg-white"*/}
-            {/*    aria-label="이전"*/}
-            {/*>*/}
-            {/*    ‹*/}
-            {/*</button>*/}
-            {/*<button*/}
-            {/*    onClick={() => scrollByCard(1)}*/}
-            {/*    className="hidden md:flex absolute -right-2 top-1/2 -translate-y-1/2 z-10 h-9 w-9 items-center justify-center rounded-full bg-white/90 shadow hover:bg-white"*/}
-            {/*    aria-label="다음"*/}
-            {/*>*/}
-            {/*    ›*/}
-            {/*</button>*/}
-
             {/* 트랙 */}
             <div
                 ref={trackRef}
@@ -53,8 +37,8 @@ export default function CardNewsCarousel({items = []}) {
 
                 <div
                     data-card
-                    className="snap-start shrink-0 rounded-2xl p-3 text-white  transition hover:translate-y-[-2px]
-             w-[100%] sm:w-[100%] md:w-[100%] overflow-hidden aspect-[5/6]"
+                    className="snap-start shrink-0 rounded-2xl px-3 text-white  transition hover:translate-y-[-2px]
+             w-[100%]  overflow-hidden aspect-[5/6]"
                 >
                     <div
                         className={`rounded-2xl p-5 h-full min-w-0  flex flex-col justify-end shadow-md hover:shadow-lg`}
@@ -68,7 +52,7 @@ export default function CardNewsCarousel({items = []}) {
                 </div>
                 <div
                     data-card
-                    className="snap-start shrink-0 rounded-2xl p-3 text-white  transition hover:translate-y-[-2px]
+                    className="snap-start shrink-0 rounded-2xl px-3 text-white  transition hover:translate-y-[-2px]
              w-[100%] sm:w-[100%] md:w-[100%] overflow-hidden aspect-[5/6]"
                 >
                     <div
@@ -83,7 +67,7 @@ export default function CardNewsCarousel({items = []}) {
                 </div>
                 <div
                     data-card
-                    className="snap-start shrink-0 rounded-2xl p-3 text-white  transition hover:translate-y-[-2px]
+                    className="snap-start shrink-0 rounded-2xl px-3 text-white  transition hover:translate-y-[-2px]
              w-[100%] sm:w-[100%] md:w-[100%] overflow-hidden aspect-[5/6]"
                 >
                     <div
@@ -102,7 +86,7 @@ export default function CardNewsCarousel({items = []}) {
                     <div
                         key={idx}
                         data-card
-                        className="snap-start shrink-0 rounded-2xl p-3 text-white  transition hover:translate-y-[-2px]
+                        className="snap-start shrink-0 rounded-2xl px-3 text-white  transition hover:translate-y-[-2px]
              w-[100%] sm:w-[100%] md:w-[100%] overflow-hidden aspect-[5/6]"
                         style={{backgroundImage: "linear-gradient(135deg,var(--tw-gradient-stops))"}}
                     >
