@@ -82,7 +82,7 @@ export default function HomePage() {
     ];
 
     return (
-        <div className="flex justify-center items-center min-h-screen bg-[#f3f3f3]/60 md:px-4 md:py-10">
+        <div className="flex justify-center items-center min-h-screen bg-[#dcdcdc]/60 md:px-4 md:py-10">
             <div className="w-full min-h-screen bg-[#f3f3f3] md:max-w-lg md:rounded-3xl  md:shadow-lg p-4">
 
 
