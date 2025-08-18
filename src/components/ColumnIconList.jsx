@@ -6,7 +6,7 @@ function LinkIcon({link}) {
             href={link.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-col items-center w-16"
+            className="flex flex-col items-center w-16 mt-1"
             title={link.title}
         >
             <div
@@ -28,7 +28,7 @@ export default function ColumnIconList({links}) {
     const icon_scroll_number = 4;
 
     return <div
-        className="mt-2 overflow-x-auto [&::-webkit-scrollbar]:hidden"
+        className="mt-1 overflow-x-auto [&::-webkit-scrollbar]:hidden"
         style={{scrollbarWidth: "none"}} // Firefox
     >
         <ul

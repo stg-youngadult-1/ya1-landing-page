@@ -77,8 +77,9 @@ export default function HomePage() {
     ]
 
     const starLinks = [
-        {title: "유튜브 채널", href: "https://www.youtube.com/@seetheglory", img: joinUrl(prefix, "/img/sm_youtube.png")},
         {title: "시광 홈페이지", href: "https://seetheglory.or.kr/", img: joinUrl(prefix, "/img/sm_homepage.png")},
+        {title: "유튜브 채널", href: "https://www.youtube.com/@seetheglory", img: joinUrl(prefix, "/img/sm_youtube.png")},
+        {title: "인스타그램", href: "https://seetheglory.or.kr/", img: joinUrl(prefix, "/img/sm_instagram.png")},
     ];
 
     return (
