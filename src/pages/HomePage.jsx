@@ -25,48 +25,13 @@ export default function HomePage() {
     ];
 
     const cardNews = [
-        {
-            tag: "DIGITAL DESIGN",
-            title: "Creating Usability with Motion: The UX in Motion Manifesto",
-            author: "Issara Willenskomer",
-            href: "#",
-            gradient: "from-rose-500 via-orange-400 to-amber-300",
-        },
-        {
-            tag: "DIGITAL DESIGN",
-            title: "Product Vision for Product Managers",
-            author: "Eugen Eşanu",
-            href: "#",
-            gradient: "from-indigo-500 via-fuchsia-500 to-pink-500",
-        },
-        {
-            tag: "EDITOR'S PICK",
-            title: "When Companies Question the Value of Design",
-            author: "Alan Cooper",
-            href: "#",
-            gradient: "from-pink-500 via-rose-500 to-orange-400",
-        },
-        {
-            tag: "SELF HELP",
-            title: "The Most Important Skill Nobody Taught You",
-            author: "Zat Rana",
-            href: "#",
-            gradient: "from-sky-500 via-cyan-500 to-blue-500",
-        },
-        {
-            tag: "DIGITAL DESIGN",
-            title: "5 Things To Do Differently About Your Product’s UX",
-            author: "Eugen Eşanu",
-            href: "#",
-            gradient: "from-emerald-500 via-teal-500 to-lime-500",
-        },
-        {
-            tag: "ART",
-            title: "Leonardo Da Vinci was the best UX Designer in history",
-            author: "Flavio Lamenza",
-            href: "#",
-            gradient: "from-blue-500 via-cyan-500 to-emerald-500",
-        },
+        // {
+        //     tag: "DIGITAL DESIGN",
+        //     title: "Creating Usability with Motion: The UX in Motion Manifesto",
+        //     author: "Issara Willenskomer",
+        //     href: "#",
+        //     gradient: "from-rose-500 via-orange-400 to-amber-300",
+        // },
     ];
 
     const starItems = [
@@ -80,6 +45,7 @@ export default function HomePage() {
         {title: "시광 홈페이지", href: "https://seetheglory.or.kr/", img: joinUrl(prefix, "/img/sm_homepage.png")},
         {title: "유튜브 채널", href: "https://www.youtube.com/@seetheglory", img: joinUrl(prefix, "/img/sm_youtube.png")},
         {title: "인스타그램", href: "https://seetheglory.or.kr/", img: joinUrl(prefix, "/img/sm_instagram.png")},
+        {title: "새가족 톡방", href: "https://invite.kakao.com/tc/z27aaUWVp5", img: joinUrl(prefix, "/img/sm_homepage.png")},
     ];
 
     return (

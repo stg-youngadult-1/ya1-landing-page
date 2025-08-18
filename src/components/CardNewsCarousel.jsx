@@ -80,6 +80,51 @@ export default function CardNewsCarousel({items = []}) {
                     >
                     </div>
                 </div>
+                <div
+                    data-card
+                    className="snap-start shrink-0 rounded-2xl px-3 text-white  transition hover:translate-y-[-2px]
+             w-[100%] sm:w-[100%] md:w-[100%] overflow-hidden aspect-[5/6]"
+                >
+                    <div
+                        className={`rounded-2xl p-5 h-full min-w-0  flex flex-col justify-end shadow-md hover:shadow-lg`}
+                        style={{
+                            backgroundImage: `url('${joinUrl(prefix, "/img/banner_4.png")}')`,
+                            backgroundSize: "auto 100%",
+                            backgroundPosition: "center"
+                        }}
+                    >
+                    </div>
+                </div>
+                <div
+                    data-card
+                    className="snap-start shrink-0 rounded-2xl px-3 text-white  transition hover:translate-y-[-2px]
+             w-[100%] sm:w-[100%] md:w-[100%] overflow-hidden aspect-[5/6]"
+                >
+                    <div
+                        className={`rounded-2xl p-5 h-full min-w-0  flex flex-col justify-end shadow-md hover:shadow-lg`}
+                        style={{
+                            backgroundImage: `url('${joinUrl(prefix, "/img/banner_5.png")}')`,
+                            backgroundSize: "auto 100%",
+                            backgroundPosition: "center"
+                        }}
+                    >
+                    </div>
+                </div>
+                <div
+                    data-card
+                    className="snap-start shrink-0 rounded-2xl px-3 text-white  transition hover:translate-y-[-2px]
+             w-[100%] sm:w-[100%] md:w-[100%] overflow-hidden aspect-[5/6]"
+                >
+                    <div
+                        className={`rounded-2xl p-5 h-full min-w-0  flex flex-col justify-end shadow-md hover:shadow-lg`}
+                        style={{
+                            backgroundImage: `url('${joinUrl(prefix, "/img/banner_6.png")}')`,
+                            backgroundSize: "auto 100%",
+                            backgroundPosition: "center"
+                        }}
+                    >
+                    </div>
+                </div>
 
 
                 {items.map((it, idx) => (
