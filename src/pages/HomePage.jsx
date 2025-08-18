@@ -101,7 +101,7 @@ export default function HomePage() {
                     {/*<p className="text-sm text-gray-200">새가족 소개</p>*/}
                 </div>
 
-                <SubtitleComponent subtitle={"카드뉴스"}/>
+                <SubtitleComponent subtitle={"환영합니다"}/>
 
                 <Subdivision>
                     <CardNewsCarousel items={cardNews}/>
