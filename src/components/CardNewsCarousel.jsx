@@ -59,38 +59,41 @@ export default function CardNewsCarousel({items = []}) {
                     <div
                         className={`rounded-2xl p-5 h-full min-w-0  flex flex-col justify-end shadow-md hover:shadow-lg`}
                         style={{
-                            backgroundImage: `url('${joinUrl(prefix, "/img/img_1.jpeg")}')`,
-                            backgroundSize: "auto 120%",
+                            backgroundImage: `url('${joinUrl(prefix, "/img/banner_1.png")}')`,
+                            backgroundSize: "auto 100%",
                             backgroundPosition: "center"
                         }}
                     >
-
-                        {/*<div*/}
-                        {/*    className={`absolute inset-0 bg-gradient-to-br ${*/}
-                        {/*        "from-black/70 to-black/0 "*/}
-                        {/*    } mix-blend-multiply`}*/}
-                        {/*/>*/}
-
-                        {/*<div className="absolute bottom-0 left-0 right-0 top-0 bg-black/40"></div>*/}
-                        {/* 반투명 오버레이 */}
-
-                        <p className="uppercase tracking-wide text-xs/5 opacity-90">hello</p>
-
-                        <h3
-                            className="mt-2 text-xl font-bold leading-snug whitespace-normal break-words hyphens-auto overflow-hidden"
-                            style={{
-                                display: "-webkit-box",
-                                WebkitLineClamp: 3,
-                                WebkitBoxOrient: "vertical",
-                            }}
-                        >
-                            hello
-                        </h3>
-
-                        <p className="mt-3 text-sm/5 opacity-90">hello</p>
-                        <div className="mt-6 flex justify-end">
-                            <span className="text-2xl opacity-90">→</span>
-                        </div>
+                    </div>
+                </div>
+                <div
+                    data-card
+                    className="snap-start shrink-0 rounded-2xl p-3 text-white  transition hover:translate-y-[-2px]
+             w-[100%] sm:w-[100%] md:w-[100%] overflow-hidden aspect-[5/6]"
+                >
+                    <div
+                        className={`rounded-2xl p-5 h-full min-w-0  flex flex-col justify-end shadow-md hover:shadow-lg`}
+                        style={{
+                            backgroundImage: `url('${joinUrl(prefix, "/img/banner_2.png")}')`,
+                            backgroundSize: "auto 100%",
+                            backgroundPosition: "center"
+                        }}
+                    >
+                    </div>
+                </div>
+                <div
+                    data-card
+                    className="snap-start shrink-0 rounded-2xl p-3 text-white  transition hover:translate-y-[-2px]
+             w-[100%] sm:w-[100%] md:w-[100%] overflow-hidden aspect-[5/6]"
+                >
+                    <div
+                        className={`rounded-2xl p-5 h-full min-w-0  flex flex-col justify-end shadow-md hover:shadow-lg`}
+                        style={{
+                            backgroundImage: `url('${joinUrl(prefix, "/img/banner_3.png")}')`,
+                            backgroundSize: "auto 100%",
+                            backgroundPosition: "center"
+                        }}
+                    >
                     </div>
                 </div>
 
