@@ -70,20 +70,15 @@ export default function HomePage() {
     ];
 
     const starItems = [
-        {title: "청1 즐겨찾기 모음", img: joinUrl(prefix, "/img/sm_star.png")},
-        {title: "시광교회 청1 신문팀 아카이브", img: joinUrl(prefix, "/img/sm_heart.png")},
-        {title: "청1 구글포토", img: joinUrl(prefix, "/img/sm_photo.png")},
+        {title: "청1 즐겨찾기 모음", img: joinUrl(prefix, "/img/sm_star.png"), href: "https://separated-garden-7c6.notion.site/1-18e942e21857807095fec59d41d5f077"},
+        {title: "시광교회 청1 신문팀 아카이브", img: joinUrl(prefix, "/img/sm_heart.png"), href: "https://separated-garden-7c6.notion.site/1-19c942e2185780439af8fefd071cafcb?pvs=74"},
+        {title: "청1 구글포토", img: joinUrl(prefix, "/img/sm_photo.png"), href: "https://separated-garden-7c6.notion.site/1-240942e21857809fad42c8a05f95b867"},
         // {title: "", img: joinUrl(prefix, "/img/")},
     ]
 
     const starLinks = [
-        {title: "YouTube", href: "https://youtube.com", img: joinUrl(prefix, "/img/sm_star.png")},
-        {title: "Instagram", href: "https://instagram.com", img: joinUrl(prefix, "/img/sm_star.png")},
-        {title: "Notion", href: "https://www.notion.so", img: joinUrl(prefix, "/img/sm_star.png")},
-        {title: "Google Docs", href: "https://docs.google.com", img: joinUrl(prefix, "/img/sm_star.png")},
-        {title: "Drive", href: "https://drive.google.com", img: joinUrl(prefix, "/img/sm_star.png")},
-        {title: "Drive", href: "https://drive.google.com", img: joinUrl(prefix, "/img/sm_star.png")},
-        // 필요에 따라 더 추가
+        {title: "유튜브 채널", href: "https://www.youtube.com/@seetheglory", img: joinUrl(prefix, "/img/sm_youtube.png")},
+        {title: "시광 홈페이지", href: "https://seetheglory.or.kr/", img: joinUrl(prefix, "/img/sm_homepage.png")},
     ];
 
     return (
@@ -113,29 +108,29 @@ export default function HomePage() {
                 </Subdivision>
 
 
-                <SubtitleComponent subtitle={"새가족 소개"}/>
+                {/*<SubtitleComponent subtitle={"새가족 소개"}/>*/}
 
-                <Subdivision>
-                    {/* 메인 이미지 */}
-                    <div className="mt-4 relative rounded-3xl overflow-hidden shadow-md/20">
-                        <img
-                            src={joinUrl(prefix, "/img/img_1.jpeg")}
-                            alt="Main"
-                            className="w-full h-full object-cover"
-                        />
-                        <div
-                            className="h-1/2 absolute bottom-0 left-0 right-0 bg-linear-to-t from-black/70 to-black/0 text-white text-md p-3 flex items-end">
-                            복음은 그리스도 안에서 우리를 한 ‘가족’으로 초대합니다!
-                        </div>
-                    </div>
+                {/*<Subdivision>*/}
+                {/*    /!* 메인 이미지 *!/*/}
+                {/*    <div className="mt-4 relative rounded-3xl overflow-hidden shadow-md/20">*/}
+                {/*        <img*/}
+                {/*            src={joinUrl(prefix, "/img/img_1.jpeg")}*/}
+                {/*            alt="Main"*/}
+                {/*            className="w-full h-full object-cover"*/}
+                {/*        />*/}
+                {/*        <div*/}
+                {/*            className="h-1/2 absolute bottom-0 left-0 right-0 bg-linear-to-t from-black/70 to-black/0 text-white text-md p-3 flex items-end">*/}
+                {/*            복음은 그리스도 안에서 우리를 한 ‘가족’으로 초대합니다!*/}
+                {/*        </div>*/}
+                {/*    </div>*/}
 
-                    {/* 메뉴 리스트 */}
-                    <div className="mt-4 space-y-3">
-                        {menuItems.map((item, idx) => (
-                            <ButtonComponent key={idx} item={item}/>
-                        ))}
-                    </div>
-                </Subdivision>
+                {/*    /!* 메뉴 리스트 *!/*/}
+                {/*    <div className="mt-4 space-y-3">*/}
+                {/*        {menuItems.map((item, idx) => (*/}
+                {/*            <ButtonComponent key={idx} item={item}/>*/}
+                {/*        ))}*/}
+                {/*    </div>*/}
+                {/*</Subdivision>*/}
 
                 <SubtitleComponent subtitle={"청년1부 즐겨찾기"}/>
 

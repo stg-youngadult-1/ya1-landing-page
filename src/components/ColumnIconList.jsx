@@ -14,7 +14,7 @@ function LinkIcon({link}) {
                 <img
                     src={link.img}
                     alt={link.title}
-                    className="w-6 h-6 object-contain"
+                    className="object-cover"
                 />
             </div>
             <span className="mt-1 text-[11px] leading-tight text-blue-900 line-clamp-2 text-center">

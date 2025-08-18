@@ -2,7 +2,8 @@ import React from "react";
 
 export default function ButtonComponent({item}) {
     return <button
-        className="h-17 w-full flex items-center bg-blue-500 text-white rounded-full p-3 shadow-md/20 hover:bg-blue-600 transition"
+        className="h-17 w-full flex items-center bg-[#3e9ce6] text-white rounded-full p-3 shadow-md/20 hover:bg-blue-500 transition"
+        onClick={() => window.open(item.href, "_blank")}
     >
         {
             item.img &&
