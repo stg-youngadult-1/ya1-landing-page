@@ -16,6 +16,5 @@ export default function ButtonComponent({item}) {
             />
         }
         <span className="flex-1 text-left">{item.title}</span>
-        <span className="text-lg">⋮</span>
     </a>;
 }
